@@ -14,7 +14,7 @@ steps:
     args:
       - '-c'
       - |
-        gcloud run deploy df-messenger-integration --image ${_IMAGE_NAME} --platform managed --region ${_CLOUD_RUN_REGION} --set-env-vars=AGENT_ID=${_AGENT_ID},CHAT_TITLE=${_CHAT_TITLE},BOT_MESSAGE=${_BOT_MESSAGE},BUTTON_TITLE_BAR_COLOR=${_BUTTON_TITLE_BAR_COLOR},CHAT_BG_COLOR=${_CHAT_BG_COLOR},FONT_COLOR=${_FONT_COLOR},SEND_ICON=${_SEND_ICON},USER_MESSAGE=${_USER_MESSAGE} --allow-unauthenticated --labels=commit=${BUILD_ID}
+        gcloud run deploy df-messenger-integration --image ${_IMAGE_NAME} --platform managed --region ${_CLOUD_RUN_REGION} --set-env-vars=AGENT_ID="${_AGENT_ID}",CHAT_TITLE="${_CHAT_TITLE}",BOT_MESSAGE="${_BOT_MESSAGE}",BUTTON_TITLE_BAR_COLOR="${_BUTTON_TITLE_BAR_COLOR}",CHAT_BG_COLOR="${_CHAT_BG_COLOR}",FONT_COLOR="${_FONT_COLOR}",SEND_ICON="${_SEND_ICON}",USER_MESSAGE="${_USER_MESSAGE}" --allow-unauthenticated --labels=commit=${BUILD_ID}
 
 substitutions:
   _IMAGE_NAME: 'gcr.io/${PROJECT_ID}/df-messenger-integration'
