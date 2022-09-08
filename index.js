@@ -25,7 +25,7 @@ app.get('*', (request, response) => {
         botMessage: process.env.BOT_MESSAGE,
         buttonTitleBarColor: process.env.BUTTON_TITLE_BAR_COLOR,
         chatBgColor: process.env.CHAT_BG_COLOR,
-        fontColor: process.env.FONT_ICON,
+        fontColor: process.env.FONT_COLOR,
         sendIcon: process.env.SEND_ICON,
         userMessage: process.env.USER_MESSAGE,
     });
