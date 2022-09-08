@@ -21,6 +21,7 @@ app.use(serveStatic);
 app.get('*', (request, response) => {
     response.render('index', {
         agentId: process.env.AGENT_ID,
+        botLocation: process.env.BOT_LOCATION,
         chatTitle: process.env.CHAT_TITLE,
         botMessage: process.env.BOT_MESSAGE,
         buttonTitleBarColor: process.env.BUTTON_TITLE_BAR_COLOR,
