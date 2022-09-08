@@ -17,7 +17,7 @@ steps:
         gcloud run deploy df-messenger-integration --image ${_IMAGE_NAME} --platform managed --region ${_CLOUD_RUN_REGION} --allow-unauthenticated --labels=commit=${BUILD_ID}
 
 substitutions:
-  _IMAGE_NAME: 'gcr.io/${_GCP_PROJECT}/df-messenger-integration'
+  _IMAGE_NAME: 'gcr.io/${PROJECT_ID}/df-messenger-integration'
   _CLOUD_RUN_REGION: 'europe-west1'
   _AGENT_ID: 'c4334d7b-b59f-4373-819a-bae2f4e931db'
   _CHAT_TITLE: 'ticketing agent'
